@@ -196,6 +196,41 @@ Imagem.salvar(cobrafocada, 'resultadosimg/cobrafocadaQuestão5.png')
 > QUESTÃO 6: explique o que cada um dos kernels acima, por si só, está fazendo. Tente executar mostrar nos resultados dessas correlações intermediárias para ter uma noção do que está acontecendo aqui.
 
 Cada um dos kernels apresentados é responsável por derivar a imagem com as bordas destacadas, sendo um deles pelo eixo x e outro pelo eixo y.
+Codigo:
+```python
+def bordas(self):
+    imagemborda = Imagem.nova(self.largura, self.altura)
+    KernelX =   [[-1, 0, 1],
+                [-2, 0, 2],
+                [-1, 0, 1]]
+    KernelY =   [[-1, -2, -1],
+                [0, 0, 0],
+                [1, 2, 1]]
+    SobelXaplicar = self.correlacao(KernelX) # Aplica o kernel para o eixo X
+    SobelYaplicar = self.correlacao(KernelY) # Aplica o kernel para o eixo Y
+    for x in range(self.largura):
+        for y in range(self.altura):
+            valor_sobel_X = SobelXaplicar.get_pixel(x, y)
+            valor_sobel_Y = SobelYaplicar.get_pixel(x, y)
+            sobelOperation = round(math.sqrt(valor_sobel_X ** 2 + valor_sobel_Y ** 2))
+            imagemborda.set_pixel(x, y, sobelOperation)
+    imagemborda.pixel_normalizado()
+    return imagemborda
+#__________________________main______________________________
+KernelX =   [[-1, 0, 1],
+            [-2, 0, 2],
+            [-1, 0, 1]]
+KernelY =   [[-1, -2, -1],
+            [0, 0, 0],
+            [1, 2, 1]]
+construcao = Imagem.carregar('test_images/construct.png')
+construcaosobelX = construcao.correlacao(KernelX) 
+Imagem.salvar(construcaosobelX, 'resultadosimg/construcaosobelXQuestão6.png')
+construcaosobelY = construcao.correlacao(KernelY) 
+Imagem.salvar(construcaosobelY, 'resultadosimg/construcaosobelYQuestão6.png')
+construcaoborda = construcao.bordas()
+Imagem.salvar(construcaoborda, 'resultadosimg/construcaobordaQuestão6.png')
+```
 
 | Kernel Sobel no eixo X | Kernel Sobel no eixo Y |
 | --------------- | ---------------- |
