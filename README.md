@@ -69,7 +69,6 @@ Para calcularmos a imagem resultande dessa correlação, basta somarmos as multi
 
 No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem porco_e_passaro.png correlacionada, de acordo com o kernel acima.
 
-Porco:
 | Imagem Original | Imagem Correlação |
 | --------------- | ---------------- |
 | ![Porco](./test_images/pigbird.png "Porco e passaro") | ![Porco Correlação](./resultadosimg/porcorrelacaoQuestão4.png) |
@@ -103,13 +102,15 @@ A subtração de 2Ix,y com Bx,y resulta em:
 
 No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem piton.png com a nitidez aplicada. Também no mesmo local, é possível encontrar o código que executa a tarefa da seção 5.1, na pasta question_answers_images está salvo o resultado da aplicação do blur com raio 5 na imagem teste.
 
-Cobra:
+| Imagem Original | Imagem Focada |
+| --------------- | ---------------- |
+| ![Cobra](./test_images/python.png "cobra") | ![Cobra focada](./resultadosimg/cobrafocadaQuestão5.png) |
 
-![Piton](./resultadosimg/cobrafocadaQuestão5.png "cobra")
+<br>
 
-Gato:
-
-![Gato](./resultadosimg/gatoborradoQuestão5.png "Gato")
+| Imagem Original | Imagem Borrada |
+| --------------- | ---------------- |
+| ![Gato](./test_images/cat.png "gato") | ![Gato borrado](./resultadosimg/gatoborradoQuestão5.png) |
 
 > QUESTÃO 6: explique o que cada um dos kernels acima, por si só, está fazendo. Tente executar mostrar nos resultados dessas correlações intermediárias para ter uma noção do que está acontecendo aqui.
 
