@@ -116,16 +116,15 @@ No arquivo pset2.py, é possível encontrar no final do arquivo o código que ex
 
 Cada um dos kernels apresentados é responsável por derivar a imagem com as bordas destacadas, sendo um deles pelo eixo x e outro pelo eixo y.
 
-Kernel Sobel no eixo X apenas:
+| Kernel Sobel no eixo X | Kernel Sobel no eixo Y |
+| --------------- | ---------------- |
+| ![SobelX](./resultadosimg/construcaosobelXQuestão6.png "Kernel Sobel X") | ![SobelY](./resultadosimg/construcaosobelYQuestão6.png "Kernel Sobel Y") |
 
-![SobelX](./resultadosimg/construcaosobelXQuestão6.png "Kernel Sobel X")
-
-Kernel Sobel no eixo Y apenas:
-
-![SobelY](./resultadosimg/construcaosobelYQuestão6.png "Kernel Sobel Y")
 
 Aplicação da Operação de Sobel completa, segundo a fórmula:
 
 Ox,y = round (√Ox²x,y + Oy² x,y)
 
-![SobelOperation](./resultadosimg/construcaobordaQuestão6.png "Operação Sobel")
+| Imagem Original | imagem com Bordas |
+| --------------- | ---------------- |
+| ![construção](./test_images/construct.png) | ![SobelOperation](./resultadosimg/construcaobordaQuestão6.png "Operação Sobel") |
