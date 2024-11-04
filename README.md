@@ -70,7 +70,7 @@ Para calcularmos a imagem resultande dessa correlação, basta somarmos as multi
 No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem porco_e_passaro.png correlacionada, de acordo com o kernel acima.
 
 Porco:
-| Imagem Original | Imagem Invertida |
+| Imagem Original | Imagem Correlação |
 | --------------- | ---------------- |
 | ![Porco](./test_images/pigbird.png "Porco e passaro") | ![Porco Correlação](./resultadosimg/porcorrelacaoQuestão4.png) |
 
