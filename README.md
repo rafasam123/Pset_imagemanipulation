@@ -101,7 +101,7 @@ A subtração de 2Ix,y com Bx,y resulta em:
 
 No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem piton.png com a nitidez aplicada. Também no mesmo local, é possível encontrar o código que executa a tarefa da seção 5.1, na pasta question_answers_images está salvo o resultado da aplicação do blur com raio 5 na imagem teste.
 
-Píton:
+Cobra:
 
 ![Piton](./resultadosimg/cobrafocadaQuestão5.png "cobra")
 
