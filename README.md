@@ -28,7 +28,12 @@ Portanto, os valores inversos da imagem 4x1 dada no enunciado são, respectivame
 
 > QUESTÃO 02: faça a depuração e, quando terminar, seu código deve conseguir passar em todos os testes do grupo de teste TestInvertido (incluindo especificamente o que você acabou de criar). Execute seu filtro de inversão na imagem imagens_teste/peixe.png, salve o resultado como uma imagem PNG e salve a imagem em seu repositório GitHub
 
-No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem peixe.png com o filtro invertido aplicado.
+No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem peixe.png com o filtro invertido aplicado.
+Codigo:
+```python
+    def invertida(self):
+      return self.aplicar_por_pixel(lambda c: 255 - c)
+```
 | Imagem Original | Imagem Invertida |
 | --------------- | ---------------- |
 | ![Peixe](./test_images/bluegill.png "Peixe") | ![Peixe Invertido](./resultadosimg/peixeinvertidoQuestao2.png) |
@@ -67,7 +72,7 @@ Para calcularmos a imagem resultande dessa correlação, basta somarmos as multi
 >0 0 0 0 0 0 0 0 0 \
 >0 0 0 0 0 0 0 0 0 ]
 
-No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem porco_e_passaro.png correlacionada, de acordo com o kernel acima.
+No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem porco_e_passaro.png correlacionada, de acordo com o kernel acima.
 
 | Imagem Original | Imagem Correlação |
 | --------------- | ---------------- |
@@ -100,7 +105,7 @@ A subtração de 2Ix,y com Bx,y resulta em:
 -1/9, -17/9, -1/9 \
 -1/9, -1/9, -1/9 ].
 
-No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem piton.png com a nitidez aplicada. Também no mesmo local, é possível encontrar o código que executa a tarefa da seção 5.1, na pasta question_answers_images está salvo o resultado da aplicação do blur com raio 5 na imagem teste.
+No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem piton.png com a nitidez aplicada. Também no mesmo local, é possível encontrar o código que executa a tarefa da seção 5.1, na pasta question_answers_images está salvo o resultado da aplicação do blur com raio 5 na imagem teste.
 
 | Imagem Original | Imagem Focada |
 | --------------- | ---------------- |
