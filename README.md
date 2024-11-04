@@ -31,8 +31,7 @@ Portanto, os valores inversos da imagem 4x1 dada no enunciado são, respectivame
 No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem peixe.png com o filtro invertido aplicado.
 | Imagem Original | Imagem Invertida |
 | --------------- | ---------------- |
-| ![Peixe](./test_images/bluegill.png) | ![Peixe Invertido](./resultadosimg/peixeinvertidoQuestao2.png) |
-![Peixe](./resultadosimg/peixeinvertidoQuestao2.png "Peixe")
+| ![Peixe](./test_images/bluegill.png "Peixe") | ![Peixe Invertido](./resultadosimg/peixeinvertidoQuestao2.png) |
 
 -------------
 
@@ -71,8 +70,9 @@ Para calcularmos a imagem resultande dessa correlação, basta somarmos as multi
 No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem porco_e_passaro.png correlacionada, de acordo com o kernel acima.
 
 Porco:
-
-![Porco](./resultadosimg/porcorrelacaoQuestão4.png "Porco e passaro")
+| Imagem Original | Imagem Invertida |
+| --------------- | ---------------- |
+| ![Porco](./test_images/pigbird.png "Porco e passaro") | ![Porco Correlação](./resultadosimg/porcorrelacaoQuestão4.png) |
 
 -----
 
