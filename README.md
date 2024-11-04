@@ -30,7 +30,7 @@ Portanto, os valores inversos da imagem 4x1 dada no enunciado são, respectivame
 
 No arquivo pset2.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem peixe.png com o filtro invertido aplicado.
 
-![Peixe](resultadosimg\peixeinvertidoQuestao2.png "Bluegill")
+![Peixe](./resultadosimg/peixeinvertidoQuestao2.png "Bluegill")
 
 -------------
 
