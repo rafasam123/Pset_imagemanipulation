@@ -76,8 +76,37 @@ Para calcularmos a imagem resultande dessa correlação, basta somarmos as multi
 >0 0 0 0 0 0 0 0 0 \
 >0 0 0 0 0 0 0 0 0 ]
 
-No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem porco_e_passaro.png correlacionada, de acordo com o kernel acima.
-
+No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta resultadosimg é possível ver a imagem porcorrelacaoQuestão4.png correlacionada, de acordo com o kernel acima.
+Codigo:
+```python
+def correlacao(self, kernel):
+    tamanho_kernel = len(kernel)
+    delocamento = tamanho_kernel // 2
+    imagem_resultado = Imagem.nova(self.largura, self.altura)
+    for x in range(self.largura):
+        for y in range(self.altura):
+            soma_correlacao = 0
+            for w in range(tamanho_kernel):
+                for z in range(tamanho_kernel):
+                    pixel = self.get_pixel(x - delocamento + w, y - delocamento + z)
+                    soma_correlacao += pixel * kernel[w][z]
+            imagem_resultado.set_pixel(x, y, soma_correlacao)
+    return imagem_resultado
+#__________________________main______________________________
+kernel = [[0, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [1, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [0, 0, 0, 0, 0, 0, 0, 0, 0], 
+               [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+    
+porco = Imagem.carregar('test_images/pigbird.png')
+porcorrelacao = porco.correlacao(kernel)
+Imagem.salvar(porcorrelacao, 'resultadosimg/porcorrelacaoQuestão4.png')
+```
 | Imagem Original | Imagem Correlação |
 | --------------- | ---------------- |
 | ![Porco](./test_images/pigbird.png "Porco e passaro") | ![Porco Correlação](./resultadosimg/porcorrelacaoQuestão4.png) |
@@ -110,6 +139,49 @@ A subtração de 2Ix,y com Bx,y resulta em:
 -1/9, -1/9, -1/9 ].
 
 No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem piton.png com a nitidez aplicada. Também no mesmo local, é possível encontrar o código que executa a tarefa da seção 5.1, na pasta question_answers_images está salvo o resultado da aplicação do blur com raio 5 na imagem teste.
+Codigo:
+
+```python
+def montar_kernel(n):
+    valor_kernel = 1/(n**2)
+    kernel = []
+    for _ in range(n):
+        linha = [valor_kernel for _ in range(n)]
+        kernel.append(linha)
+    return kernel
+
+def pixel_normalizado(self):
+    def normalizar_valor(valor):
+        return max(0, min(255, round(valor)))
+    for x in range(self.largura):
+        for y in range(self.altura):
+            pixelanalise = normalizar_valor(self.get_pixel(x, y))
+            self.set_pixel(x, y, pixelanalise)
+
+def borrada(self, n):
+    kernel = self.correlacao(montar_kernel(n))# Aplica a correlação com o kernel
+    kernel.pixel_normalizado() # Normaliza os pixels da nova imagem borrada
+    return kernel
+
+def focada(self, n):
+    imagemborrada = self.borrada(n) # Aplica o desfoque
+    imagemfocada = Imagem.nova(self.largura, self.altura)
+    for x in range(self.largura):
+        for y in range(self.altura):
+            valor_pixel_original = self.get_pixel(x, y)
+            valor_pixel_focada = round(2 * valor_pixel_original - imagemborrada.get_pixel(x,y))
+            imagemfocada.set_pixel(x, y, valor_pixel_focada)
+    imagemfocada.pixel_normalizado()
+    return imagemfocada
+#__________________________main______________________________
+gato = Imagem.carregar('test_images/cat.png')
+gatoborrado = gato.borrada(5)
+Imagem.salvar(gatoborrado, 'resultadosimg/gatoborradoQuestão5.png')
+
+cobra = Imagem.carregar('test_images/python.png')
+cobrafocada = cobra.focada(11)
+Imagem.salvar(cobrafocada, 'resultadosimg/cobrafocadaQuestão5.png')
+```
 
 | Imagem Original | Imagem Focada |
 | --------------- | ---------------- |
