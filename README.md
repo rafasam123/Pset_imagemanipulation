@@ -22,7 +22,7 @@ R: Sabendo que os pixels podem ser representados em cores nos valores de 0 até 
 
 Portanto, os valores inversos da imagem 4x1 dada no enunciado são, respectivamente:
 
-• pixels: [226, 166, 119, 155]
+• pixels: [226, 166, 119, 55]
 
 -------------
 
