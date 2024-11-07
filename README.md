@@ -138,7 +138,7 @@ A subtração de 2Ix,y com Bx,y resulta em:
 -1/9, -17/9, -1/9 \
 -1/9, -1/9, -1/9 ].
 
-No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta question_answers_images é possível ver a imagem piton.png com a nitidez aplicada. Também no mesmo local, é possível encontrar o código que executa a tarefa da seção 5.1, na pasta question_answers_images está salvo o resultado da aplicação do blur com raio 5 na imagem teste.
+No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta resultadosimg é possível ver a imagem cobrafocadaQuestão5.png com a nitidez aplicada. Também no mesmo local, é possível encontrar o código que executa a tarefa da seção 5.1, na pasta resultadosimg está salvo o resultado da aplicação do blur com raio 5 na imagem teste.
 Codigo:
 
 ```python
