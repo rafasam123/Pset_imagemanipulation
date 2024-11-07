@@ -26,7 +26,7 @@ Portanto, os valores inversos da imagem 4x1 dada no enunciado são, respectivame
 
 -------------
 
-> QUESTÃO 02: faça a depuração e, quando terminar, seu código deve conseguir passar em todos os testes do grupo de teste TestInvertido (incluindo especificamente o que você acabou de criar). Execute seu filtro de inversão na imagem imagens_teste/peixe.png, salve o resultado como uma imagem PNG e salve a imagem em seu repositório GitHub
+> QUESTÃO 02: faça a depuração e, quando terminar, seu código deve conseguir passar em todos os testes do grupo de teste TestInvertido (incluindo especificamente o que você acabou de criar). Execute seu filtro de inversão na imagem imagens_teste/peixe.png, salve o resultado como uma imagem PNG e salve a imagem.
 
 No arquivo pset1.py, é possível encontrar no final do arquivo o código que executa esta tarefa. E, na pasta resultadosimg é possível ver a imagem peixeinvertidoQuestao2.png com o filtro invertido aplicado.
 Codigo:
